@@ -65,3 +65,10 @@ class WeatherManager {
 //        }
 //    }
 }
+
+extension WeatherManager {
+    func fetchWeather(latitude: Double, longitude: Double) {
+        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
+        performeRequest(with: urlString)
+    }
+}
